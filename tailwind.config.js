@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -28,16 +30,12 @@ module.exports = {
               },
           },
           fontFamily: {
-              'redhat': ['Red Hat Display','sans-serif'],
-              'inter': ['Inter', 'sans-serif'],
-              'lexend': ['Lexend Deca', 'sans-serif'],
+              'josefin': ['Josefin Sans','sans-serif'],
           },
           screens: {
               'mobile': '375px',
-              // => @media (min-width: 640px) { ... }
-
               'desktop': '1440px',
-              // => @media (min-width: 1280px) { ... }
+              ...defaultTheme.screens,
           },
       },
   },
