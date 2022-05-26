@@ -6,7 +6,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="dark h-full w-full">
+    <div id="overall" className="h-full w-full">
       <div className="App min-h-screen dark:text-fem-dark-300 bg-fem-light-200 dark:bg-fem-dark-100 flex justify-center flex-col items-center font-josefin selection:bg-fem-light-500 selection:text-fem-light-100">
         <Background />
       
