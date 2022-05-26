@@ -1,12 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-function Header() {
+function Header(props) {
+  const toggleButton = props.toggleButton;
 
-  const overall = document.getElementById("overall");
-
-  const toggleButton = function() {
-    overall.classList.toggle("dark");
-  }
 
   return (
     <header className="flex justify-between w-full px-1 text-fem-light-100 items-center text-3xl">
@@ -17,6 +14,10 @@ function Header() {
       </button>
     </header>
   )
+}
+
+Header.propTypes = {
+  toggleButton: PropTypes.func,
 }
 
 export default Header
