@@ -1,7 +1,6 @@
 import React from 'react'
 import ListDetailsClear from './ListDetailsClear'
 import ListDetailsLeft from './ListDetailsLeft'
-import ListDetailsSubcategory from './ListDetailsSubcategory'
 
 function ListDetailsMobile() {
   return (
