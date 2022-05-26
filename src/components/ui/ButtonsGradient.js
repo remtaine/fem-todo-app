@@ -1,11 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-function ButtonsGradient() {
+function ButtonsGradient(props) {
   return (
-    <div className="flex items-center justify-center rounded-full p-[3px] bg-fem-light-200 duration-500 group-hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-        <button className="bg-fem-light-100 hover:opacity-60 duration-500 w-3 h-3 rounded-full"></button>
+    <div className="flex items-center justify-center rounded-full p-[1px] bg-fem-light-200 dark:bg-fem-dark-600 duration-500 group-hover:bg-gradient-to-br from-fem-200 via-fem-100 to-fem-300">
+        <button onClick={props.clickAction} className="bg-fem-light-100 dark:bg-fem-dark-200 hover:opacity-60 duration-500 w-4 h-4 rounded-full flex justify-center items-center">
+        
+        </button>
     </div>
   )
+}
+
+ButtonsGradient.propTypes = {
+  clickAction: PropTypes.func,
+}
+
+ButtonsGradient.defaultProps = {
+  clickAction: () => {console.log("Button pressed!")},
 }
 
 export default ButtonsGradient
